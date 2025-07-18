@@ -17,73 +17,13 @@ import {
   Download,
 } from "lucide-react";
 import { Badge, Button } from "antd";
-
-// Tetris Block Components
-const TetrisBlock = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-}) => (
-  <div className={`bg-orange-500 border-2 border-orange-400 ${className}`}>
-    {children}
-  </div>
-);
-
-const TetrisL = ({ className }: { className?: string }) => (
-  <div className={`absolute ${className}`}>
-    <div className="grid grid-cols-2 gap-1">
-      <TetrisBlock className="w-6 h-6" />
-      <div></div>
-      <TetrisBlock className="w-6 h-6" />
-      <div></div>
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-    </div>
-  </div>
-);
-
-const TetrisT = ({ className }: { className?: string }) => (
-  <div className={`absolute ${className}`}>
-    <div className="grid grid-cols-3 gap-1">
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-      <div></div>
-      <TetrisBlock className="w-6 h-6" />
-      <div></div>
-    </div>
-  </div>
-);
-
-const TetrisSquare = ({ className }: { className?: string }) => (
-  <div className={`absolute ${className}`}>
-    <div className="grid grid-cols-2 gap-1">
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-    </div>
-  </div>
-);
-
-const TetrisLine = ({
-  className,
-  vertical = false,
-}: {
-  className?: string;
-  vertical?: boolean;
-}) => (
-  <div className={`absolute ${className}`}>
-    <div className={`grid gap-1 ${vertical ? "grid-rows-4" : "grid-cols-4"}`}>
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-      <TetrisBlock className="w-6 h-6" />
-    </div>
-  </div>
-);
+import {
+  TetrisBlock,
+  TetrisL,
+  TetrisLine,
+  TetrisSquare,
+  TetrisT,
+} from "./components";
 
 export default function TetrisPortfolioPage() {
   return (

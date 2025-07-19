@@ -24,11 +24,11 @@ import {
   TetrisSquare,
   TetrisT,
 } from "./components";
+import { HeroSection } from "./components/hero-section";
 
 export default function TetrisPortfolioPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden scroll-smooth">
-      {/* Tetris Blocks Background */}
+    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden scroll-smooth font-mono">
       <TetrisL className="top-10 right-20 opacity-80" />
       <TetrisT className="top-32 right-40 opacity-60" />
       <TetrisSquare className="top-20 left-20 opacity-70" />
@@ -37,8 +37,6 @@ export default function TetrisPortfolioPage() {
       <TetrisT className="bottom-20 right-60 opacity-70 rotate-180" />
       <TetrisSquare className="bottom-60 right-20 opacity-50" />
       <TetrisLine className="bottom-10 left-40 opacity-60" />
-
-      {/* Header */}
       <header className="relative z-10 p-6 border-b border-orange-500/30">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
@@ -49,8 +47,8 @@ export default function TetrisPortfolioPage() {
               <TetrisBlock className="w-4 h-4" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">PORTFOLIO</h1>
-              <p className="text-xs text-orange-400">DEVELOPER</p>
+              <h1 className="text-xl font-bold ">PORTFOLIO</h1>
+              <p className="text-xs text-orange-400 ">DEVELOPER</p>
             </div>
           </div>
           <nav className="flex gap-8">
@@ -107,69 +105,8 @@ export default function TetrisPortfolioPage() {
       </header>
 
       <main className="relative z-10 max-w-6xl mx-auto px-6 py-12">
-        {/* Hero Section */}
-        <section className="mb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-orange-400 mb-4 uppercase tracking-wide">
-                Ready to build something amazing?
-              </p>
-              <h1 className="text-6xl font-bold mb-6 leading-tight">
-                I AM
-                <br />
-                <span className="text-orange-400">MINH TRI</span>
-              </h1>
-              <p className="text-xl mb-8 text-gray-300">
-                FULL-STACK DEVELOPER
-                <br />
-                <span className="text-orange-400">CORRECTLY</span>
-              </p>
-              <div className="flex gap-4">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
-                  <Play className="w-4 h-4 mr-2" />
-                  VIEW PROJECTS
-                </Button>
-                <Button
-                  // variant="outline"
-                  className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 bg-transparent"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  DOWNLOAD CV
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-gray-800 p-6 rounded-lg border border-orange-500/30 relative">
-                <div className="absolute -top-4 left-6 bg-gray-800 px-4 py-1 border border-orange-500/30 rounded">
-                  <span className="text-orange-400 text-sm">
-                    CONTACT_INFO.exe
-                  </span>
-                </div>
-                <div className="space-y-4 font-mono text-sm">
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-4 h-4 text-orange-400" />
-                    <span>(+84) 905648525</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-4 h-4 text-orange-400" />
-                    <span>trimdm211@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Github className="w-4 h-4 text-orange-400" />
-                    <span>github.com/minhtri21112001</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <MapPin className="w-4 h-4 text-orange-400" />
-                    <span>Nha Trang City, Vietnam</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="mb-20">
+        <HeroSection />
+        {/* <section id="about" className="mb-20">
           <div className="bg-gray-800 p-8 rounded-lg border border-orange-500/30 relative">
             <div className="absolute -top-4 left-6 bg-gray-800 px-4 py-1 border border-orange-500/30 rounded">
               <span className="text-orange-400 text-sm">
@@ -187,9 +124,8 @@ export default function TetrisPortfolioPage() {
               challenges to further grow and contribute his skills.
             </p>
           </div>
-        </section>
+        </section> */}
 
-        {/* Skills Section */}
         <section id="skills" className="mb-20">
           <h2 className="text-4xl font-bold mb-8 text-center">
             <span className="text-orange-400">TECHNICAL</span> SKILLS
@@ -280,7 +216,6 @@ export default function TetrisPortfolioPage() {
           </div>
         </section>
 
-        {/* Experience Section */}
         <section id="experience" className="mb-20">
           <h2 className="text-4xl font-bold mb-8 text-center">
             <span className="text-orange-400">WORK</span> EXPERIENCE
@@ -320,7 +255,7 @@ export default function TetrisPortfolioPage() {
                   <div className="text-right">
                     <div className="flex items-center gap-2 text-orange-400">
                       <Calendar className="w-4 h-4" />
-                      <span className="font-mono text-sm">{job.period}</span>
+                      <span className=" text-sm">{job.period}</span>
                     </div>
                   </div>
                 </div>
@@ -358,7 +293,7 @@ export default function TetrisPortfolioPage() {
                 <p className="text-gray-300">
                   Academic Scholarship - 1st Semester 2022
                 </p>
-                <p className="text-sm text-orange-400 font-mono">MAY 2022</p>
+                <p className="text-sm text-orange-400 ">MAY 2022</p>
               </div>
             </div>
 
@@ -373,7 +308,7 @@ export default function TetrisPortfolioPage() {
                 <p className="text-gray-300">
                   IELTS 6.5 Overall (CEFR Level B2)
                 </p>
-                <p className="text-sm text-orange-400 font-mono">AUG 2022</p>
+                <p className="text-sm text-orange-400 ">AUG 2022</p>
               </div>
             </div>
           </div>
@@ -408,7 +343,7 @@ export default function TetrisPortfolioPage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-orange-500/30 p-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 font-mono">
+          <p className="text-gray-400 ">
             © 2024 NGUYEN_DINH_MINH_TRI.exe - ALL_RIGHTS_RESERVED
           </p>
         </div>

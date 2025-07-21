@@ -1,6 +1,48 @@
 import { Button } from "antd";
-import { Play, Download, Phone, Mail, Github, MapPin } from "lucide-react";
+import {
+  Play,
+  Download,
+  Phone,
+  Mail,
+  Github,
+  MapPin,
+  GraduationCap,
+  BookMarked,
+} from "lucide-react";
 import { contactInfo } from "../constants";
+
+const infos = [
+  {
+    id: "phone",
+    icon: <Phone className="w-4 h-4 text-orange-400" />,
+    label: contactInfo.phone,
+  },
+  {
+    id: "email",
+    icon: <Mail className="w-4 h-4 text-orange-400" />,
+    label: contactInfo.email,
+  },
+  {
+    id: "github",
+    icon: <Github className="w-4 h-4 text-orange-400" />,
+    label: contactInfo.github_url,
+  },
+  {
+    id: "address",
+    icon: <MapPin className="w-4 h-4 text-orange-400" />,
+    label: contactInfo.address,
+  },
+  {
+    id: "major",
+    icon: <BookMarked className="w-4 h-4 text-orange-400" />,
+    label: contactInfo.major,
+  },
+  {
+    id: "university",
+    icon: <GraduationCap className="w-4 h-4 text-orange-400" />,
+    label: contactInfo.university,
+  },
+];
 
 export const HeroSection = () => {
   return (
@@ -37,22 +79,14 @@ export const HeroSection = () => {
               <span className="text-orange-400 text-sm">CONTACT_INFO.exe</span>
             </div>
             <div className="space-y-4  text-sm">
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-orange-400" />
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-orange-400" />
-                <span>{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Github className="w-4 h-4 text-orange-400" />
-                <span>{contactInfo.github_url}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-orange-400" />
-                <span>{contactInfo.address}</span>
-              </div>
+              {infos.map((info) => {
+                return (
+                  <div key={info.id} className="flex items-center gap-3">
+                    {info.icon}
+                    <span>{info.label}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

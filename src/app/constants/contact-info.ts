@@ -7,5 +7,5 @@ export const contactInfo = {
   address: "Ho Chi Minh City, Vietnam",
   major: "Information System",
   university:
-    "University of Information Technology - Vietnam National University HCM",
+    "University of Information Technology - Vietnam National University HCM, 2019 - 2023",
 };

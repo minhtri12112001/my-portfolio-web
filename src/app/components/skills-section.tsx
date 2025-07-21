@@ -1,44 +1,50 @@
 import { Badge } from "antd";
-import { Code, Database, Wrench, GraduationCap, Server } from "lucide-react";
+import {
+  Code,
+  Database,
+  Wrench,
+  GraduationCap,
+  Server,
+  BotMessageSquare,
+} from "lucide-react";
 
 const skills = [
   {
-    title: "MOBILE DEV",
+    title: "Languages & Frameworks",
     icon: <Code className="w-6 h-6" />,
-    skills: ["Java", "Android", "Javascript", "Typescript", "React Native"],
+    skills: ["Typescript", "Python", "Next.js", "NestJS", "Flask"],
   },
   {
-    title: "WEB DEV",
-    icon: <Server className="w-6 h-6" />,
-    skills: ["HTML", "CSS", "ReactJS", "NextJS", "TailwindCSS"],
-  },
-  {
-    title: "BACKEND",
+    title: "Back-end",
     icon: <Database className="w-6 h-6" />,
-    skills: ["NodeJS", "ExpressJS", "SQLite", "MySQL", "Firebase", "MongoDB"],
+    skills: ["PostgreSQL", "Prisma", "Supabase", "Redis", "Kafka"],
   },
   {
-    title: "DEVOPS",
+    title: "DevOps",
     icon: <Server className="w-6 h-6" />,
-    skills: ["BashScript", "Linux", "AWS", "CloudFlare", "Docker", "Jenkins"],
-  },
-  {
-    title: "TOOLS",
-    icon: <Wrench className="w-6 h-6" />,
     skills: [
-      "Git",
-      "Gitlab",
-      "Jaga",
-      "Trello",
-      "Postman",
-      "Reactotron",
-      "Figma",
+      "AWS Cloud Infrastructure",
+      "Docker",
+      "CI/CD Pipelines",
+      "Kubernetes",
+      "Grafana",
+      "Prometheus",
+      "Terraform",
+      "CloudFlare",
     ],
   },
   {
-    title: "EDUCATION",
-    icon: <GraduationCap className="w-6 h-6" />,
-    skills: ["VNU-UIT", "E-Commerce", "GPA: 7.7/10", "2019-2023"],
+    title: "AI",
+    icon: <BotMessageSquare className="w-6 h-6" />,
+    skills: ["Langchain", "CrewAI", "Vectors & RAG", "AI Agents"] ,
+  },
+  {
+    title: "Tools",
+    icon: <Wrench className="w-6 h-6" />,
+    skills: [
+      "Git",
+      "Postman",
+    ],
   },
 ];
 
@@ -52,7 +58,7 @@ export const SkillSection = () => {
         {skills.map((category, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg border border-orange-500/30 hover:border-orange-400 transition-colors"
+            className="bg-gray-800 p-6 rounded-lg border border-orange-500/30 hover:border-orange-400 transition-colors h-[202px]"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="text-orange-400">{category.icon}</div>

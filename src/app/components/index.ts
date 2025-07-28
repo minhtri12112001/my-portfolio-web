@@ -5,3 +5,4 @@ export * from "./tetris-square";
 export * from "./tetris-t";
 export * from "./hero-section";
 export * from "./skills-section";
+export * from "./experience-section";

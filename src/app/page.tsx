@@ -1,14 +1,9 @@
 "use client";
 
 import { Button } from "antd";
+import { Award, Github, GraduationCap, Mail } from "lucide-react";
 import {
-  Award,
-  Calendar,
-  Github,
-  GraduationCap,
-  Mail
-} from "lucide-react";
-import {
+  ExperienceSection,
   HeroSection,
   SkillSection,
   TetrisBlock,
@@ -118,70 +113,7 @@ export default function TetrisPortfolioPage() {
           </div>
         </section> */}
         <SkillSection />
-
-        <section id="experience" className="mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center">
-            <span className="text-orange-400">WORK</span> EXPERIENCE
-          </h2>
-          <div className="space-y-8">
-            {[
-              {
-                company: "METASTREAM TM",
-                role: "Full-stack Developer",
-                period: "Feb 2023 - May 2023",
-                project: "Aura Beauty Clinic ERP System",
-                tech: "NextJS, Supabase, ExpressJS, Ghost CMS, Strapi CMS",
-                description:
-                  "Designed and implemented user interfaces and user experiences for company staff members and customers. Deployed and operated database systems, search system and other related management systems.",
-              },
-              {
-                company: "KYANON DIGITAL",
-                role: "Software Engineer (React Native)",
-                period: "Sep 2022 - Jan 2023",
-                project: "MOM App",
-                tech: "React Native, Drupal CMS, WebSocket, Agora",
-                description:
-                  "Fixed bugs affecting user experiences when interacting with screens relating to shop, products, articles and livestreaming. Designed and implemented user interfaces and user experiences when interacting with elements relating to livestreaming.",
-              },
-            ].map((job, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 p-8 rounded-lg border border-orange-500/30"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-orange-400">
-                      {job.company}
-                    </h3>
-                    <p className="text-xl text-gray-300">{job.role}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="flex items-center gap-2 text-orange-400">
-                      <Calendar className="w-4 h-4" />
-                      <span className=" text-sm">{job.period}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <p>
-                    <span className="text-orange-400 font-semibold">
-                      PROJECT:
-                    </span>{" "}
-                    {job.project}
-                  </p>
-                  <p>
-                    <span className="text-orange-400 font-semibold">
-                      TECH STACK:
-                    </span>{" "}
-                    {job.tech}
-                  </p>
-                  <p className="text-gray-300">{job.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
+        <ExperienceSection />
         {/* Awards & Certificates */}
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-8">

@@ -1,13 +1,12 @@
 import { Button } from "antd";
 import {
-  Play,
-  Download,
-  Phone,
-  Mail,
-  Github,
-  MapPin,
-  GraduationCap,
   BookMarked,
+  Github,
+  GraduationCap,
+  Mail,
+  MapPin,
+  Phone,
+  Play,
 } from "lucide-react";
 import { contactInfo } from "../constants";
 
@@ -59,16 +58,19 @@ export const HeroSection = () => {
               {contactInfo.name.toUpperCase()}
             </span>
           </h1>
-          <p className="text-xl mb-8 text-gray-300">
+          <p className="text-xl mb-8 text-gray-300 font-semibold">
             {contactInfo.title.toUpperCase()}
           </p>
           <div className="flex gap-4">
-            <Button className="!bg-orange-500 hover:!bg-orange-600 !text-white !px-8 !border-none !font-semibold !font-mono">
+            {/* <Button className="!bg-orange-500 hover:!bg-orange-600 !text-white !px-8 !border-none !font-semibold !font-mono">
               <Play className="w-4 h-4 mr-2" />
               VIEW PROJECTS
-            </Button>
-            <Button className="!border-orange-500 !text-orange-400 hover:!bg-orange-500 hover:!text-white !px-8 !py-3 !bg-transparent !font-semibold !font-mono">
-              <Download className="w-4 h-4 mr-2" />
+            </Button> */}
+            <Button
+              className="!w-82 !border-orange-500 !text-orange-400 hover:!bg-orange-500 hover:!text-white !px-8 !py-3 !bg-transparent !font-semibold !font-mono"
+              download
+              href="/Resume_NguyenDinhMinhTri.pdf"
+            >
               DOWNLOAD CV
             </Button>
           </div>

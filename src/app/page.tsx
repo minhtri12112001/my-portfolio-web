@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "antd";
-import { Award, Github, GraduationCap, Mail } from "lucide-react";
+import { Award, Github, GraduationCap, Linkedin, Mail } from "lucide-react";
 import {
   ExperienceSection,
   HeroSection,
@@ -12,6 +12,7 @@ import {
   TetrisSquare,
   TetrisT,
 } from "./components";
+import { contactInfo } from "./constants";
 
 export default function TetrisPortfolioPage() {
   return (
@@ -114,7 +115,6 @@ export default function TetrisPortfolioPage() {
         </section> */}
         <SkillSection />
         <ExperienceSection />
-        {/* Awards & Certificates */}
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg border border-orange-500/30">
@@ -159,13 +159,19 @@ export default function TetrisPortfolioPage() {
               {`Ready to work together? Let's connect!`}
             </p>
             <div className="flex justify-center gap-6">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
-                <Mail className="w-4 h-4 mr-2" />
-                EMAIL ME
+              <Button
+                className="!border-orange-500 !text-orange-400 hover:!bg-orange-500 hover:!text-white !px-8 !py-3 !bg-transparent !font-mono"
+                href={`${contactInfo.linkedin_url}`}
+                target="_blank"
+              >
+                <Linkedin className="w-4 h-4 mr-2" />
+                LINKEDIN
               </Button>
               <Button
                 // variant="outline"
-                className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 bg-transparent"
+                className="!border-orange-500 !text-orange-400 hover:!bg-orange-500 hover:!text-white !px-8 !py-3 !bg-transparent !font-mono"
+                href={`${contactInfo.github_url}`}
+                target="_blank"
               >
                 <Github className="w-4 h-4 mr-2" />
                 GITHUB

@@ -8,7 +8,7 @@ const workExperiences = [
     type: "Startup Company",
     location: "Remote, Olso, Norway",
     role: "Full-stack Developer",
-    period: "Feb 2023 - May 2023",
+    period: "Feb 2024 - Jun 2025",
     project: "MeedEdge AI Lead Generation & Sales Platform",
     tech: "Next.js, Zustand, NestJS, Flask, Supabase, LangChain, OpenAI, AWS",
     description:
@@ -19,32 +19,32 @@ const workExperiences = [
     type: "Startup Company",
     location: "Ho Chi Minh City, Vietnam",
     role: "Full-stack Developer (React Native, ExpressJS)",
-    period: "Feb 2023 - May 2023",
+    period: "Sep 2023 - Feb 2024",
     project: "ZoBook App",
     tech: "React Native, MSSQL, ExpressJS",
     description:
-      "- Built mobile applications using React Native, ExpressJS, and MSSQL.\n- Implemented user authentication, account management, and payment flows.\n- Designed APIs connecting mobile applications with MSSQL database for business operations.\n- Optimized application performance through error handling and continuous monitoring",
+      "- Built mobile applications using React Native, ExpressJS, and MSSQL.\n- Implemented user authentication, account management, and payment flows.\n- Designed APIs connecting mobile applications with MSSQL database for business operations.\n- Optimized application performance through error handling and continuous monitoring.",
   },
   {
     company: "METASTREAM TM",
     type: "Outsourcing Company",
     location: "Ho Chi Minh City, Vietnam",
     role: "Full-stack Developer (Next.js, ExpressJS)",
-    period: "Feb 2023 - May 2023",
+    period: "Mar 2023 - Aug 2023",
     project: "Aura Beauty Clinic ERP System",
-    tech: "Next.js, Redux, Supabase, ExpressJS",
+    tech: "Next.js, Redux, Supabase, ExpressJS, AWS",
     description:
-      "- Developed web-based ERP system UI from existing Figma designs using Next.js, TailwindCSS and Ant Design.\n- Built APIs for data extraction including customer management, inventory, scheduling, and task allocation.\n- Deployed system with CI/CD pipeline on AWS infrastructure",
+      "- Developed web-based ERP system UI from existing Figma designs using Next.js, TailwindCSS and Ant Design.\n- Built APIs for data extraction including customer management, inventory, scheduling, and task allocation.\n- Deployed system with CI/CD pipeline on AWS infrastructure.",
   },
   {
     company: "KYANON DIGITAL",
     type: "Outsourcing Company",
     location: "Ho Chi Minh City, Vietnam",
     role: "Software Engineer (React Native)",
-    period: "Sep 2022 - February 2023",
+    period: "Sep 2022 - Feb 2023",
     project: "NOM App",
     tech: "React Native, Redux, Firebase",
-    description: `- Developed React Native mobile application from Figma designs and integrated with Drupal CMS APIs.\n- Fixed critical bugs affecting user experience in shopping and livestreaming features.\n- Implemented real-time user interfaces and enhanced user interaction elements`,
+    description: `- Developed React Native mobile application from Figma designs and integrated with Drupal CMS APIs.\n- Fixed critical bugs affecting user experience in shopping and livestreaming features.\n- Implemented real-time user interfaces and enhanced user interaction elements.`,
   },
 ];
 
@@ -72,7 +72,7 @@ export const ExperienceSection = () => {
                     </h3>
                   </a>
                 </Tooltip>
-                <p className="text-xl text-gray-300">{job.role}</p>
+                <p className="text-xl text-gray-300">{job.location}</p>
               </div>
               <div className="text-right">
                 <div className="flex items-center gap-2 text-orange-400">
@@ -83,14 +83,18 @@ export const ExperienceSection = () => {
             </div>
             <div className="space-y-3">
               <p>
-                <span className="text-orange-400 font-semibold">PROJECT:</span>{" "}
-                {job.project}
+                <span className="text-orange-400 font-semibold">ROLE:</span>
+                {` ${job.role}`}
+              </p>
+              <p>
+                <span className="text-orange-400 font-semibold">PROJECT:</span>
+                {` ${job.project}`}
               </p>
               <p>
                 <span className="text-orange-400 font-semibold">
                   TECH STACK:
-                </span>{" "}
-                {job.tech}
+                </span>
+                {` ${job.tech}`}
               </p>
               <p className="text-gray-300 whitespace-pre-line">
                 {job.description}
